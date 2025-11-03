@@ -1,15 +1,20 @@
 {
-  "dependencies": {
-    "firebase-admin": "^13.5.0"
-  },
   "name": "parenting-coach",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.6.1",
+    "firebase-admin": "^13.5.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }

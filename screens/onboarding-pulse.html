@@ -15,65 +15,76 @@
     <form id="pulse-form" class="form">
       <!-- Step 1 -->
       <div class="step" data-step="1">
-        <h3 data-i18n="pulse.step1.title">The Pulse Check — How are things feeling right now?</h3>
-        <p class="muted" data-i18n="pulse.step1.desc">This helps us understand emotional pain points and goals.</p>
-        <div class="group">
-          <label class="group-title" data-i18n="pulse.step1.q1">What about parenting has felt hard lately? Select all that apply.</label>
-          <div class="options col2">
-            <label class="opt"><input type="checkbox" name="hard[]" value="meltdowns"/> <span data-i18n="pulse.step1.hard.meltdowns">Big, explosive feelings & meltdowns (my child's)</span></label>
-            <label class="opt"><input type="checkbox" name="hard[]" value="power_struggles"/> <span data-i18n="pulse.step1.hard.power">Everything turns into a power struggle</span></label>
-            <label class="opt"><input type="checkbox" name="hard[]" value="physical"/> <span data-i18n="pulse.step1.hard.physical">Hitting, biting, throwing, and other physical behaviors</span></label>
-            <label class="opt"><input type="checkbox" name="hard[]" value="routines"/> <span data-i18n="pulse.step1.hard.routines">Routines feel like a constant battle (mornings, bedtime, etc.)</span></label>
-            <label class="opt"><input type="checkbox" name="hard[]" value="my_anger"/> <span data-i18n="pulse.step1.hard.anger">My own anger & reactivity</span></label>
-            <label class="opt"><input type="checkbox" name="hard[]" value="overwhelming"/> <span data-i18n="pulse.step1.hard.a_lot">Everything just feels like a lot right now</span></label>
-            <label class="opt"><input type="checkbox" name="hard[]" value="sounding_board"/> <span data-i18n="pulse.step1.hard.board">I'm just looking for a supportive sounding board</span></label>
+        <div class="question">
+          <h3 data-i18n="pulse.step1.title">The Pulse Check — How are things feeling right now?</h3>
+          <p class="muted" data-i18n="pulse.step1.desc">This helps us understand emotional pain points and goals.</p>
+          <div class="group">
+            <label class="group-title" data-i18n="pulse.step1.q1">What about parenting has felt hard lately? Select all that apply.</label>
+            <div class="options col2">
+              <label class="opt"><input type="checkbox" name="hard[]" value="meltdowns"/> <span data-i18n="pulse.step1.hard.meltdowns">Big, explosive feelings & meltdowns (my child's)</span></label>
+              <label class="opt"><input type="checkbox" name="hard[]" value="power_struggles"/> <span data-i18n="pulse.step1.hard.power">Everything turns into a power struggle</span></label>
+              <label class="opt"><input type="checkbox" name="hard[]" value="physical"/> <span data-i18n
+"pulse.step1.hard.physical">Hitting, biting, throwing, and other physical behaviors</span></label>
+              <label class="opt"><input type="checkbox" name="hard[]" value="routines"/> <span data-i18n="pulse.step1.hard.routines">Routines feel like a constant battle (mornings, bedtime, etc.)</span></label>
+              <label class="opt"><input type="checkbox" name="hard[]" value="my_anger"/> <span data-i18n="pulse.step1.hard.anger">My own anger & reactivity</span></label>
+              <label class="opt"><input type="checkbox" name="hard[]" value="overwhelming"/> <span data-i18n="pulse.step1.hard.a_lot">Everything just feels like a lot right now</span></label>
+              <label class="opt"><input type="checkbox" name="hard[]" value="sounding_board"/> <span data-i18n="pulse.step1.hard.board">I'm just looking for a supportive sounding board</span></label>
+            </div>
           </div>
         </div>
 
-        <div class="group">
-          <label class="group-title" data-i18n="pulse.step1.q2">If parenting were a little easier, what would that look like? Pick one.</label>
-          <div class="options col1">
-            <label class="opt"><input type="radio" name="easier" value="understand_needs"/> <span data-i18n="pulse.step1.easy.needs">Truly understanding my child's needs and behaviors</span></label>
-            <label class="opt"><input type="radio" name="easier" value="connection_joy"/> <span data-i18n="pulse.step1.easy.connection">Feeling more connected and joyful with my child</span></label>
-            <label class="opt"><input type="radio" name="easier" value="less_overwhelm"/> <span data-i18n="pulse.step1.easy.control">Feeling less overwhelmed and more in control</span></label>
-            <label class="opt"><input type="radio" name="easier" value="cooperation"/> <span data-i18n="pulse.step1.easy.cooperation">Experiencing less chaos and more cooperation day-to-day</span></label>
-            <label class="opt"><input type="radio" name="easier" value="calm_confident"/> <span data-i18n="pulse.step1.easy.calm">Responding calmly and confidently in difficult moments</span></label>
-            <label class="opt"><input type="radio" name="easier" value="validated"/> <span data-i18n="pulse.step1.easy.validated">Feeling more secure and validated in my parenting choices</span></label>
+        <div class="question" hidden>
+          <h3 data-i18n="pulse.step1.title">The Pulse Check — How are things feeling right now?</h3>
+          <p class="muted" data-i18n="pulse.step1.desc">This helps us understand emotional pain points and goals.</p>
+          <div class="group">
+            <label class="group-title" data-i18n="pulse.step1.q2">If parenting were a little easier, what would that look like? Pick one.</label>
+            <div class="options col1">
+              <label class="opt"><input type="radio" name="easier" value="understand_needs"/> <span data-i18n="pulse.step1.easy.needs">Truly understanding my child's needs and behaviors</span></label>
+              <label class="opt"><input type="radio" name="easier" value="connection_joy"/> <span data-i18n="pulse.step1.easy.connection">Feeling more connected and joyful with my child</span></label>
+              <label class="opt"><input type="radio" name="easier" value="less_overwhelm"/> <span data-i18n="pulse.step1.easy.control">Feeling less overwhelmed and more in control</span></label>
+              <label class="opt"><input type="radio" name="easier" value="cooperation"/> <span data-i18n="pulse.step1.easy.cooperation">Experiencing less chaos and more cooperation day-to-day</span></label>
+              <label class="opt"><input type="radio" name="easier" value="calm_confident"/> <span data-i18n="pulse.step1.easy.calm">Responding calmly and confidently in difficult moments</span></label>
+              <label class="opt"><input type="radio" name="easier" value="validated"/> <span data-i18n="pulse.step1.easy.validated">Feeling more secure and validated in my parenting choices</span></label>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Step 2 -->
       <div class="step" data-step="2" hidden>
-        <h3 data-i18n="pulse.step2.title">The Current Landscape — What’s the most pressing issue?</h3>
-        <p class="muted" data-i18n="pulse.step2.desc">Pick the one that best matches your situation.</p>
-        <div class="options col1">
-          <label class="opt"><input type="radio" name="pressing" value="big_feelings"/> <span data-i18n="pulse.step2.big_feelings">My child's feelings seem too big for them to handle</span></label>
-          <label class="opt"><input type="radio" name="pressing" value="doesnt_listen"/> <span data-i18n="pulse.step2.listen">My child doesn’t seem to listen to me</span></label>
-          <label class="opt"><input type="radio" name="pressing" value="bedtime"/> <span data-i18n="pulse.step2.bedtime">Bedtime has become a nightly struggle</span></label>
-          <label class="opt"><input type="radio" name="pressing" value="rudeness"/> <span data-i18n="pulse.step2.rudeness">I'm seeing a lot of rudeness, defiance, or hitting</span></label>
-          <label class="opt"><input type="radio" name="pressing" value="tantrums_physical"/> <span data-i18n="pulse.step2.tantrums">Tantrums are becoming physical and overwhelming</span></label>
-          <label class="opt"><input type="radio" name="pressing" value="worry"/> <span data-i18n="pulse.step2.worry">My child seems to worry a lot</span></label>
-          <label class="opt"><input type="radio" name="pressing" value="sibling_conflict"/> <span data-i18n="pulse.step2.siblings">My kids are constantly arguing with each other</span></label>
-          <label class="opt"><input type="radio" name="pressing" value="parent_calm"/> <span data-i18n="pulse.step2.parent_calm">I struggle to stay calm when my child is dysregulated</span></label>
-          <label class="opt"><input type="radio" name="pressing" value="teenage"/> <span data-i18n="pulse.step2.teen">I’m navigating the unique challenges of the teenage years</span></label>
-          <label class="opt"><input type="radio" name="pressing" value="new_baby"/> <span data-i18n="pulse.step2.new_baby">I’m adjusting to life with a new baby</span></label>
+        <div class="question">
+          <h3 data-i18n="pulse.step2.title">The Current Landscape — What’s the most pressing issue?</h3>
+          <p class="muted" data-i18n="pulse.step2.desc">Pick the one that best matches your situation.</p>
+          <div class="options col1">
+            <label class="opt"><input type="radio" name="pressing" value="big_feelings"/> <span data-i18n="pulse.step2.big_feelings">My child's feelings seem too big for them to handle</span></label>
+            <label class="opt"><input type="radio" name="pressing" value="doesnt_listen"/> <span data-i18n="pulse.step2.listen">My child doesn’t seem to listen to me</span></label>
+            <label class="opt"><input type="radio" name="pressing" value="bedtime"/> <span data-i18n="pulse.step2.bedtime">Bedtime has become a nightly struggle</span></label>
+            <label class="opt"><input type="radio" name="pressing" value="rudeness"/> <span data-i18n="pulse.step2.rudeness">I'm seeing a lot of rudeness, defiance, or hitting</span></label>
+            <label class="opt"><input type="radio" name="pressing" value="tantrums_physical"/> <span data-i18n="pulse.step2.tantrums">Tantrums are becoming physical and overwhelming</span></label>
+            <label class="opt"><input type="radio" name="pressing" value="worry"/> <span data-i18n="pulse.step2.worry">My child seems to worry a lot</span></label>
+            <label class="opt"><input type="radio" name="pressing" value="sibling_conflict"/> <span data-i18n="pulse.step2.siblings">My kids are constantly arguing with each other</span></label>
+            <label class="opt"><input type="radio" name="pressing" value="parent_calm"/> <span data-i18n="pulse.step2.parent_calm">I struggle to stay calm when my child is dysregulated</span></label>
+            <label class="opt"><input type="radio" name="pressing" value="teenage"/> <span data-i18n="pulse.step2.teen">I’m navigating the unique challenges of the teenage years</span></label>
+            <label class="opt"><input type="radio" name="pressing" value="new_baby"/> <span data-i18n="pulse.step2.new_baby">I’m adjusting to life with a new baby</span></label>
+          </div>
         </div>
       </div>
 
       <!-- Step 3 -->
       <div class="step" data-step="3" hidden>
-        <h3 data-i18n="pulse.step3.title">Your Family Constellation — Tell us about your crew.</h3>
-        <p class="muted" data-i18n="pulse.step3.desc">This helps us provide age- and family-specific guidance.</p>
-        <div class="group">
-          <label class="group-title" data-i18n="pulse.step3.q1">How many kids are in your family?</label>
-          <div class="stepper">
-            <button type="button" class="btn-step" data-op="-1">−</button>
-            <input type="number" name="kids" id="kids" value="1" min="1" max="10" />
-            <button type="button" class="btn-step" data-op="1">+</button>
+        <div class="question">
+          <h3 data-i18n="pulse.step3.title">Your Family Constellation — Tell us about your crew.</h3>
+          <p class="muted" data-i18n="pulse.step3.desc">This helps us provide age- and family-specific guidance.</p>
+          <div class="group">
+            <label class="group-title" data-i18n="pulse.step3.q1">How many kids are in your family?</label>
+            <div class="stepper">
+              <button type="button" class="btn-step" data-op="-1">−</button>
+              <input type="number" name="kids" id="kids" value="1" min="1" max="10" />
+              <button type="button" class="btn-step" data-op="1">+</button>
+            </div>
           </div>
         </div>
-        <div class="group">
+        <div class="question" hidden>
           <label class="group-title" data-i18n="pulse.step3.q2">And what are their age ranges? Select all that apply.</label>
           <div class="options col2">
             <label class="opt"><input type="checkbox" name="ages[]" value="0_1"/> <span data-i18n="pulse.step3.age.0_1">0 - 1 Years (Infant)</span></label>
@@ -87,14 +98,16 @@
 
       <!-- Step 4 -->
       <div class="step" data-step="4" hidden>
-        <h3 data-i18n="pulse.step4.title">Your Support Style — How do you learn best?</h3>
-        <p class="muted" data-i18n="pulse.step4.desc">Select all that apply—this shapes how we support you.</p>
-        <div class="options col1">
-          <label class="opt"><input type="checkbox" name="support[]" value="instant_answers"/> <span data-i18n="pulse.step4.instant">Give me instant answers to my questions</span></label>
-          <label class="opt"><input type="checkbox" name="support[]" value="quick_scripts"/> <span data-i18n="pulse.step4.scripts">Offer quick scripts and strategies I can use right away</span></label>
-          <label class="opt"><input type="checkbox" name="support[]" value="workshops"/> <span data-i18n="pulse.step4.workshops">Help me go deeper with expert-led workshops and guides</span></label>
-          <label class="opt"><input type="checkbox" name="support[]" value="audio_lessons"/> <span data-i18n="pulse.step4.audio">Provide on-the-go audio lessons I can fit into my routine</span></label>
-          <label class="opt"><input type="checkbox" name="support[]" value="open_to_all"/> <span data-i18n="pulse.step4.all">I'm open to all forms of support!</span></label>
+        <div class="question">
+          <h3 data-i18n="pulse.step4.title">Your Support Style — How do you learn best?</h3>
+          <p class="muted" data-i18n="pulse.step4.desc">Select all that apply—this shapes how we support you.</p>
+          <div class="options col1">
+            <label class="opt"><input type="checkbox" name="support[]" value="instant_answers"/> <span data-i18n="pulse.step4.instant">Give me instant answers to my questions</span></label>
+            <label class="opt"><input type="checkbox" name="support[]" value="quick_scripts"/> <span data-i18n="pulse.step4.scripts">Offer quick scripts and strategies I can use right away</span></label>
+            <label class="opt"><input type="checkbox" name="support[]" value="workshops"/> <span data-i18n="pulse.step4.workshops">Help me go deeper with expert-led workshops and guides</span></label>
+            <label class="opt"><input type="checkbox" name="support[]" value="audio_lessons"/> <span data-i18n="pulse.step4.audio">Provide on-the-go audio lessons I can fit into my routine</span></label>
+            <label class="opt"><input type="checkbox" name="support[]" value="open_to_all"/> <span data-i18n="pulse.step4.all">I'm open to all forms of support!</span></label>
+          </div>
         </div>
       </div>
 
@@ -115,20 +128,56 @@
       const next = document.getElementById('btn-next');
       const submit = document.getElementById('btn-submit');
       const key = 'pc_pulse';
-      let i = 0;
+      let current_step_idx = 0;
+      let current_q_idx = 0;
 
-      function show(idx){
-        i = Math.max(0, Math.min(idx, steps.length-1));
-        steps.forEach((s, j)=>{ s.hidden = j !== i; });
-        dots.forEach((d, j)=>{ d.classList.toggle('active', j <= i); });
-        prev.hidden = i === 0;
-        next.hidden = i === steps.length-1;
-        submit.hidden = i !== steps.length-1;
+      function show(){
+        // Hide all steps
+        steps.forEach(s => s.hidden = true);
+        // Show the current step
+        steps[current_step_idx].hidden = false;
+        
+        // Get questions in the current step
+        const questions_in_step = Array.from(steps[current_step_idx].querySelectorAll('.question'));
+        // Hide all questions in the current step
+        questions_in_step.forEach(q => q.hidden = true);
+        // Show the current question
+        questions_in_step[current_q_idx].hidden = false;
+        
+        // Update the progress dots
+        dots.forEach((d, j)=>{ d.classList.toggle('active', j <= current_step_idx); });
+        
+        // Update button visibility
+        prev.hidden = current_step_idx === 0 && current_q_idx === 0;
+        const is_last_step = current_step_idx === steps.length - 1;
+        const is_last_question_in_step = current_q_idx === questions_in_step.length - 1;
+        next.hidden = is_last_step && is_last_question_in_step;
+        submit.hidden = !(is_last_step && is_last_question_in_step);
+        
         if (window.i18n) window.i18n.translate(form);
       }
 
-      prev.addEventListener('click', ()=> show(i-1));
-      next.addEventListener('click', ()=> show(i+1));
+      prev.addEventListener('click', ()=>{
+        const questions_in_step = Array.from(steps[current_step_idx].querySelectorAll('.question'));
+        if (current_q_idx > 0) {
+          current_q_idx--;
+        } else {
+          current_step_idx--;
+          const prev_step_questions = Array.from(steps[current_step_idx].querySelectorAll('.question'));
+          current_q_idx = prev_step_questions.length - 1;
+        }
+        show();
+      });
+      next.addEventListener('click', ()=>{
+        const questions_in_step = Array.from(steps[current_step_idx].querySelectorAll('.question'));
+        if (current_q_idx < questions_in_step.length - 1) {
+          current_q_idx++;
+        } else {
+          current_step_idx++;
+          current_q_idx = 0;
+        }
+        show();
+      });
 
       // stepper
       form.querySelectorAll('.btn-step').forEach(btn=>{
@@ -169,7 +218,7 @@
         window.navigate('onboarding/create-account');
       });
 
-      show(0);
+      show();
     })();
   </script>
 </section>

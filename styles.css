@@ -84,3 +84,10 @@ button.chip{background:var(--surface)}
 .drawer-nav{display:flex;flex-direction:column}
 .drawer-nav a{color:var(--text);text-decoration:none;padding:12px 16px;border-top:1px solid #4b1632}
 .backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5)}
+
+@media (min-width: 768px) {
+  .screen.onboarding.pulse .card {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
