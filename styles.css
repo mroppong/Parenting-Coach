@@ -86,8 +86,23 @@ button.chip{background:var(--surface)}
 .backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5)}
 
 @media (min-width: 768px) {
-  .screen.onboarding.pulse .card {
-    max-width: 600px;
-    margin: 0 auto;
+  /* On desktop, constrain the app to a phone-like view */
+  .app-shell {
+    max-width: 420px;
+    height: calc(100dvh - 40px);
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.5);
+    border: 1px solid var(--surface);
+    overflow: hidden;
+    position: relative;
   }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.loading {
+  animation: pulse 1.5s infinite;
 }

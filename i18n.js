@@ -78,13 +78,10 @@
 
       'onboarding.childCount.title': 'How many children?',
 
-      'onboarding.childProfile.title': 'Child profile',
-      'form.childName': 'Child name',
-      'form.age': 'Age',
-      'form.pronouns': 'Pronouns',
-      'pronouns.she': 'She/Her',
-      'pronouns.he': 'He/Him',
-      'pronouns.they': 'They/Them',
+      'child_profiles.title': 'Child Profiles',
+      'child_profiles.child_title': 'Child {{index}}',
+      'child_profiles.name_label': "Child's Name",
+      'child_profiles.age_label': 'Age',
 
       'onboarding.childMore.title': 'More about your child',
       'form.interests': 'Interests',
@@ -178,13 +175,10 @@
 
       'onboarding.childCount.title': 'Combien d’enfants ?',
 
-      'onboarding.childProfile.title': 'Profil de l’enfant',
-      'form.childName': 'Prénom de l’enfant',
-      'form.age': 'Âge',
-      'form.pronouns': 'Pronoms',
-      'pronouns.she': 'Elle',
-      'pronouns.he': 'Il',
-      'pronouns.they': 'Iel',
+      'child_profiles.title': 'Profils des enfants',
+      'child_profiles.child_title': 'Enfant {{index}}',
+      'child_profiles.name_label': "Nom de l'enfant",
+      'child_profiles.age_label': 'Âge',
 
       'onboarding.childMore.title': 'Plus d’informations sur votre enfant',
       'form.interests': 'Centres d’intérêt',
@@ -216,15 +210,22 @@
     updateGlobeLabel(lang);
   }
 
-  function t(key){
+  function t(key, options){
     const lang = getLang();
-    return messages[lang]?.[key] || messages.en[key] || key;
+    let text = messages[lang]?.[key] || messages.en[key] || key;
+    if (options) {
+      for (const [k, v] of Object.entries(options)) {
+        text = text.replace(`{{${k}}}`, v);
+      }
+    }
+    return text;
   }
 
   function translate(root=document){
     root.querySelectorAll('[data-i18n]')?.forEach(el => {
       const key = el.getAttribute('data-i18n');
-      const text = t(key);
+      const options = JSON.parse(el.getAttribute('data-i18n-options') || '{}');
+      const text = t(key, options);
       if (el.placeholder !== undefined && el.tagName === 'INPUT') {
         el.placeholder = text;
       } else {
@@ -261,7 +262,7 @@
     });
   }
 
-  window.i18n = { t, translate, setLang, getLang };
+  window.i18n = { t, translate, setLang, getLang, wireToggle };
   window.addEventListener('DOMContentLoaded', () => {
     wireToggle();
     translate();

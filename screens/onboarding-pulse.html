@@ -23,8 +23,7 @@
             <div class="options col2">
               <label class="opt"><input type="checkbox" name="hard[]" value="meltdowns"/> <span data-i18n="pulse.step1.hard.meltdowns">Big, explosive feelings & meltdowns (my child's)</span></label>
               <label class="opt"><input type="checkbox" name="hard[]" value="power_struggles"/> <span data-i18n="pulse.step1.hard.power">Everything turns into a power struggle</span></label>
-              <label class="opt"><input type="checkbox" name="hard[]" value="physical"/> <span data-i18n
-"pulse.step1.hard.physical">Hitting, biting, throwing, and other physical behaviors</span></label>
+              <label class="opt"><input type="checkbox" name="hard[]" value="physical"/> <span data-i18n="pulse.step1.hard.physical">Hitting, biting, throwing, and other physical behaviors</span></label>
               <label class="opt"><input type="checkbox" name="hard[]" value="routines"/> <span data-i18n="pulse.step1.hard.routines">Routines feel like a constant battle (mornings, bedtime, etc.)</span></label>
               <label class="opt"><input type="checkbox" name="hard[]" value="my_anger"/> <span data-i18n="pulse.step1.hard.anger">My own anger & reactivity</span></label>
               <label class="opt"><input type="checkbox" name="hard[]" value="overwhelming"/> <span data-i18n="pulse.step1.hard.a_lot">Everything just feels like a lot right now</span></label>
@@ -127,30 +126,27 @@
       const prev = document.getElementById('btn-prev');
       const next = document.getElementById('btn-next');
       const submit = document.getElementById('btn-submit');
-      const key = 'pc_pulse';
       let current_step_idx = 0;
       let current_q_idx = 0;
 
       function show(){
-        // Hide all steps
-        steps.forEach(s => s.hidden = true);
-        // Show the current step
-        steps[current_step_idx].hidden = false;
+        steps.forEach((step, step_idx) => {
+          step.hidden = step_idx !== current_step_idx;
+          if(step_idx === current_step_idx) {
+            const questions_in_step = Array.from(step.querySelectorAll('.question'));
+            questions_in_step.forEach((question, question_idx) => {
+              question.hidden = question_idx !== current_q_idx;
+            });
+          }
+        });
         
-        // Get questions in the current step
-        const questions_in_step = Array.from(steps[current_step_idx].querySelectorAll('.question'));
-        // Hide all questions in the current step
-        questions_in_step.forEach(q => q.hidden = true);
-        // Show the current question
-        questions_in_step[current_q_idx].hidden = false;
-        
-        // Update the progress dots
         dots.forEach((d, j)=>{ d.classList.toggle('active', j <= current_step_idx); });
         
-        // Update button visibility
         prev.hidden = current_step_idx === 0 && current_q_idx === 0;
+        const questions_in_current_step = Array.from(steps[current_step_idx].querySelectorAll('.question'));
         const is_last_step = current_step_idx === steps.length - 1;
-        const is_last_question_in_step = current_q_idx === questions_in_step.length - 1;
+        const is_last_question_in_step = current_q_idx === questions_in_current_step.length - 1;
+        
         next.hidden = is_last_step && is_last_question_in_step;
         submit.hidden = !(is_last_step && is_last_question_in_step);
         
@@ -158,21 +154,21 @@
       }
 
       prev.addEventListener('click', ()=>{
-        const questions_in_step = Array.from(steps[current_step_idx].querySelectorAll('.question'));
         if (current_q_idx > 0) {
           current_q_idx--;
-        } else {
+        } else if (current_step_idx > 0) {
           current_step_idx--;
           const prev_step_questions = Array.from(steps[current_step_idx].querySelectorAll('.question'));
           current_q_idx = prev_step_questions.length - 1;
         }
         show();
       });
+
       next.addEventListener('click', ()=>{
-        const questions_in_step = Array.from(steps[current_step_idx].querySelectorAll('.question'));
-        if (current_q_idx < questions_in_step.length - 1) {
+        const questions_in_current_step = Array.from(steps[current_step_idx].querySelectorAll('.question'));
+        if (current_q_idx < questions_in_current_step.length - 1) {
           current_q_idx++;
-        } else {
+        } else if (current_step_idx < steps.length - 1) {
           current_step_idx++;
           current_q_idx = 0;
         }
@@ -189,20 +185,6 @@
         });
       });
 
-      // restore previous answers
-      try{
-        const saved = JSON.parse(localStorage.getItem(key)||'null');
-        if (saved){
-          // checkboxes
-          (saved.hard||[]).forEach(v=>{ const el = form.querySelector(`input[name=\"hard[]\"][value=\"${v}\"]`); if(el) el.checked = true; });
-          (saved.ages||[]).forEach(v=>{ const el = form.querySelector(`input[name=\"ages[]\"][value=\"${v}\"]`); if(el) el.checked = true; });
-          (saved.support||[]).forEach(v=>{ const el = form.querySelector(`input[name=\"support[]\"][value=\"${v}\"]`); if(el) el.checked = true; });
-          if(saved.easier) { const el = form.querySelector(`input[name=easier][value=\"${saved.easier}\"]`); if(el) el.checked = true; }
-          if(saved.pressing){ const el = form.querySelector(`input[name=pressing][value=\"${saved.pressing}\"]`); if(el) el.checked = true; }
-          if(saved.kids){ form.querySelector('#kids').value = saved.kids; }
-        }
-      }catch(e){}
-
       form.addEventListener('submit', (ev)=>{
         ev.preventDefault();
         const data = {
@@ -211,11 +193,18 @@
           pressing: form.querySelector('input[name=pressing]:checked')?.value || null,
           kids: Number(form.kids.value||1),
           ages: Array.from(form.querySelectorAll('input[name=\"ages[]\"]:checked')).map(el=>el.value),
-          support: Array.from(form.querySelectorAll('input[name=\"support[]\"]:checked')).map(el=>el.value)
+          support: Array.from(form.querySelectorAll('input[name=\"support[]\"]:checked')).map(el=>el.value),
+          createdAt: new Date(),
         };
-        localStorage.setItem(key, JSON.stringify(data));
-        // Navigate to account creation next
-        window.navigate('onboarding/create-account');
+        
+        db.collection("pulse_checks").add(data)
+          .then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
+            window.navigate('onboarding/child-count');
+          })
+          .catch((error) => {
+            console.error("Error adding document: ", error);
+          });
       });
 
       show();

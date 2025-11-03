@@ -1,15 +1,60 @@
 <section class="screen chat">
-  <!-- Paste Stitch markup for Main Chat Interface here (code-main_chat_interface.html) -->
   <header class="topbar">
     <button class="icon" data-nav="menu" title="Menu">☰</button>
     <h2 data-i18n="chat.title">Coach</h2>
   </header>
-  <div class="chat-thread">
+  <div class="chat-thread" id="chat-thread">
     <div class="msg coach" data-i18n="chat.systemWelcome">Welcome! How can I help today?</div>
-    <div class="msg user" data-i18n="chat.exampleUser">Bedtime is tough with Sophie.</div>
   </div>
-  <form class="chat-input" onsubmit="event.preventDefault();">
-    <input type="text" data-i18n="chat.placeholder" placeholder="Type a message" />
+  <form class="chat-input" id="chat-form">
+    <input type="text" id="chat-input-text" data-i18n="chat.placeholder" placeholder="Type a message" />
     <button class="primary" type="submit" data-i18n="action.send">Send</button>
   </form>
+
+  <script>
+    (function() {
+      const chatThread = document.getElementById('chat-thread');
+      const chatForm = document.getElementById('chat-form');
+      const chatInput = document.getElementById('chat-input-text');
+      let history = [];
+
+      chatForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const userMessage = chatInput.value.trim();
+        if (userMessage === '') return;
+
+        // Add user message to UI
+        addMessage(userMessage, 'user');
+        chatInput.value = '';
+
+        // Show loading indicator
+        const loadingIndicator = addMessage('...', 'coach', true);
+
+        // Get personalized response
+        const response = await getPersonalizedResponse(history, userMessage);
+        
+        // Remove loading indicator
+        loadingIndicator.remove();
+        
+        // Add AI response to UI
+        addMessage(response, 'coach');
+        
+        // Update history
+        history.push({ role: 'user', parts: [{ text: userMessage }] });
+        history.push({ role: 'model', parts: [{ text: response }] });
+      });
+
+      function addMessage(text, sender, isLoading = false) {
+        const msgDiv = document.createElement('div');
+        msgDiv.classList.add('msg', sender);
+        if (isLoading) {
+          msgDiv.classList.add('loading');
+        }
+        msgDiv.textContent = text;
+        chatThread.appendChild(msgDiv);
+        chatThread.scrollTop = chatThread.scrollHeight;
+        return msgDiv;
+      }
+    })();
+  </script>
 </section>
