@@ -1,0 +1,15 @@
+<section class="screen chat">
+  <!-- Paste Stitch markup for Main Chat Interface here (code-main_chat_interface.html) -->
+  <header class="topbar">
+    <button class="icon" data-nav="menu" title="Menu">☰</button>
+    <h2 data-i18n="chat.title">Coach</h2>
+  </header>
+  <div class="chat-thread">
+    <div class="msg coach" data-i18n="chat.systemWelcome">Welcome! How can I help today?</div>
+    <div class="msg user" data-i18n="chat.exampleUser">Bedtime is tough with Sophie.</div>
+  </div>
+  <form class="chat-input" onsubmit="event.preventDefault();">
+    <input type="text" data-i18n="chat.placeholder" placeholder="Type a message" />
+    <button class="primary" type="submit" data-i18n="action.send">Send</button>
+  </form>
+</section>

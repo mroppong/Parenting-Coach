@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aura - Child Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#8f0032",
+            "background-light": "#f7f1ef",
+            "background-dark": "#181a1b",
+            "claret": "#8F0032",
+            "tyrian-purple": "#71124C",
+            "chocolate-cosmos": "#410017",
+            "eerie-black": "#181A1B",
+            "linen": "#F0E4DF",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"],
+            "serif": ["Lora", "serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-eerie-black dark:text-linen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex flex-grow flex-col">
+<header class="relative flex h-16 w-full items-center justify-center p-4">
+<button class="absolute left-4 top-1/2 -translate-y-1/2 text-eerie-black dark:text-linen">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+<h1 class="font-serif text-xl font-medium text-eerie-black dark:text-linen">Liam's Profile</h1>
+</header>
+<main class="flex flex-1 flex-col gap-8 px-6 py-4">
+<div class="flex flex-col items-center gap-6 rounded-xl bg-linen/50 p-6 dark:bg-eerie-black/20">
+<h2 class="font-serif text-lg font-medium text-eerie-black dark:text-linen">Key Temperament Traits</h2>
+<div class="relative h-64 w-64 md:h-80 md:w-80">
+<canvas id="temperamentChart"></canvas>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div>
+<h3 class="font-serif text-lg font-medium text-eerie-black dark:text-linen">How to Best Communicate</h3>
+<ul class="mt-2 list-disc space-y-2 pl-5 text-eerie-black/80 dark:text-linen/80">
+<li>Use a calm, steady voice, especially when he is feeling intense emotions.</li>
+<li>Acknowledge his feelings before offering solutions. "I see you're feeling frustrated right now."</li>
+<li>Give him choices to foster his sense of autonomy. "Would you like to clean up now or in 5 minutes?"</li>
+</ul>
+</div>
+<div>
+<h3 class="font-serif text-lg font-medium text-eerie-black dark:text-linen">How to Support Him When He's Upset</h3>
+<ul class="mt-2 list-disc space-y-2 pl-5 text-eerie-black/80 dark:text-linen/80">
+<li>His high reactivity means he needs space first. Let him withdraw to a safe corner before approaching.</li>
+<li>Offer physical comfort like a hug or a back rub once he's ready to accept it.</li>
+<li>Help him label his big feelings. "It sounds like you're feeling disappointed that we have to leave."</li>
+</ul>
+</div>
+<div>
+<h3 class="font-serif text-lg font-medium text-eerie-black dark:text-linen">Core Needs</h3>
+<ul class="mt-2 list-disc space-y-2 pl-5 text-eerie-black/80 dark:text-linen/80">
+<li>
+<span class="font-semibold text-eerie-black dark:text-linen">Predictability:</span> Consistent routines help him feel secure and manage his high energy levels.
+              </li>
+<li>
+<span class="font-semibold text-eerie-black dark:text-linen">Autonomy:</span> He thrives when he has a sense of control over his activities and choices.
+              </li>
+<li>
+<span class="font-semibold text-eerie-black dark:text-linen">Connection:</span> Quality one-on-one time helps him regulate and feel understood.
+              </li>
+</ul>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script>
+    const ctx = document.getElementById('temperamentChart');
+    if (ctx) {
+      // Check for dark mode to set colors
+      const isDarkMode = document.documentElement.classList.contains('dark');
+      const gridColor = isDarkMode ? 'rgba(240, 228, 223, 0.2)' : 'rgba(24, 26, 27, 0.1)';
+      const labelColor = isDarkMode ? '#F0E4DF' : '#181A1B';
+      new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ['Sensitivity', 'Intensity', 'Adaptability', 'Persistence', 'Activity Level'],
+          datasets: [{
+            label: 'Liam\'s Temperament',
+            data: [4, 5, 2, 4, 5],
+            fill: true,
+            backgroundColor: 'rgba(113, 18, 76, 0.2)',
+            borderColor: '#71124C',
+            pointBackgroundColor: '#71124C',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: '#71124C'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          elements: {
+            line: {
+              borderWidth: 2
+            }
+          },
+          scales: {
+            r: {
+              angleLines: {
+                color: gridColor
+              },
+              grid: {
+                color: gridColor
+              },
+              pointLabels: {
+                color: labelColor,
+                font: {
+                  family: 'Inter, sans-serif',
+                  size: 12,
+                }
+              },
+              ticks: {
+                color: labelColor,
+                backdropColor: 'transparent',
+                stepSize: 1
+              },
+              min: 0,
+              max: 5
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body></html>

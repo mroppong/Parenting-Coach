@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Account - Aura</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Lora:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#8f0032",
+              "background-light": "#f8f5f6",
+              "background-dark": "#230f16",
+              "linen": "#F0E4DF",
+              "linen-light": "#f7f1ef",
+              "eerie-black": "#181A1B",
+              "claret": "#8F0032",
+              "tyrian-purple": "#71124C",
+              "chocolate-cosmos": "#410017",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "serif": ["Lora", "serif"]
+            },
+            borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-linen-light font-display text-eerie-black">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center bg-linen-light group/design-root overflow-x-hidden p-4">
+<main class="w-full max-w-md mx-auto flex flex-col items-center">
+<h1 class="text-eerie-black text-[32px] font-serif font-semibold tracking-tight leading-tight text-center pb-8 pt-6">Let's create your account.</h1>
+<div class="w-full space-y-6">
+<label class="flex flex-col w-full">
+<p class="text-eerie-black text-base font-medium leading-normal pb-2">Your Name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-eerie-black focus:outline-0 focus:ring-0 border border-eerie-black/20 bg-transparent focus:border-eerie-black/50 h-14 placeholder:text-eerie-black/40 p-[15px] text-base font-normal leading-normal" placeholder="Enter your full name" value=""/>
+</label>
+<label class="flex flex-col w-full">
+<p class="text-eerie-black text-base font-medium leading-normal pb-2">Your Email</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-eerie-black focus:outline-0 focus:ring-0 border border-eerie-black/20 bg-transparent focus:border-eerie-black/50 h-14 placeholder:text-eerie-black/40 p-[15px] text-base font-normal leading-normal" placeholder="Enter your email address" value=""/>
+</label>
+<label class="flex flex-col w-full">
+<p class="text-eerie-black text-base font-medium leading-normal pb-2">Create Password</p>
+<div class="flex w-full flex-1 items-stretch">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-eerie-black focus:outline-0 focus:ring-0 border border-eerie-black/20 bg-transparent focus:border-eerie-black/50 h-14 placeholder:text-eerie-black/40 p-[15px] rounded-r-none border-r-0 pr-2 text-base font-normal leading-normal" placeholder="Enter a secure password" type="password" value=""/>
+<button aria-label="Toggle password visibility" class="text-eerie-black/60 flex border border-eerie-black/20 bg-transparent items-center justify-center px-4 rounded-r-lg border-l-0">
+<span class="material-symbols-outlined" data-icon="Eye">visibility</span>
+</button>
+</div>
+</label>
+</div>
+<button class="flex items-center justify-center w-full h-14 px-6 mt-10 rounded-lg bg-claret text-white text-base font-semibold leading-normal shadow-sm hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-claret focus:ring-offset-2 focus:ring-offset-linen-light">
+                Finish &amp; Start My Journey
+            </button>
+<p class="text-eerie-black/70 text-sm font-normal leading-normal pb-3 pt-6 text-center">By continuing, you agree to our <a class="underline hover:text-eerie-black" href="#">Terms of Service</a> and <a class="underline hover:text-eerie-black" href="#">Privacy Policy</a>.</p>
+</main>
+</div>
+</body></html>

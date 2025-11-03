@@ -1,0 +1,207 @@
+{
+  "meta/config": {
+    "schemaVersion": "1.0.0",
+    "generatedAt": "2025-11-02T00:00:00.000Z",
+    "notes": "Path-keyed Firestore seed. Replace demo IDs with real userId/childIds as needed."
+  },
+
+  "users/demoUser_001": {
+    "displayName": "Parent Demo",
+    "email": "parent@example.com",
+    "createdAt": "2025-11-02T00:00:00.000Z",
+    "updatedAt": "2025-11-02T00:00:00.000Z",
+
+    "parentProfile": {
+      "instrument": "PSDQ-SF",
+      "instrumentVersion": "short",
+      "instructions": "Please read each statement and choose the answer that best describes how you typically behave as a parent. There are no right or wrong answers.",
+      "responseScale": {
+        "1": "Never",
+        "2": "Rarely",
+        "3": "Sometimes",
+        "4": "Often",
+        "5": "Always"
+      },
+      "dateCompleted": null,
+
+      "items": [
+        {"id": "psdq_01", "text": "I am responsive to our child's feelings or needs.", "status": "ok"},
+        {"id": "psdq_02", "text": "I use physical punishment as a way of disciplining our child.", "status": "ok"},
+        {"id": "psdq_03", "text": "I take our child's desires into account before asking the child to do something.", "status": "ok"},
+        {"id": "psdq_04", "text": "When our child asks why they have to conform, I state: \"Because I said so,\" or \"I am your parent and I want you to.\"", "status": "ok"},
+        {"id": "psdq_05", "text": "I explain to our child how we feel about the child's good and bad behavior.", "status": "ok"},
+        {"id": "psdq_06", "text": "I spank when our child is disobedient.", "status": "ok"},
+        {"id": "psdq_07", "text": "I encourage our child to talk about their troubles.", "status": "ok"},
+        {"id": "psdq_08", "text": "I find it difficult to discipline our child.", "status": "ok"},
+        {"id": "psdq_09", "text": "I encourage our child to freely express themself even when disagreeing with parents.", "status": "ok"},
+        {"id": "psdq_10", "text": "I punish by taking privileges away from our child with little if any explanation.", "status": "ok"},
+        {"id": "psdq_11", "text": "I emphasize the reasons for rules.", "status": "ok"},
+        {"id": "psdq_12", "text": "I give comfort and understanding when our child is upset.", "status": "ok"},
+        {"id": "psdq_13", "text": "Item text incomplete in source (commotion about something).", "status": "incomplete"},
+        {"id": "psdq_14", "text": "I explode in anger towards our child.", "status": "ok"},
+        {"id": "psdq_15", "text": "Item text incomplete in source (threaten ... when he/she is being disobedient).", "status": "incomplete"},
+        {"id": "psdq_16", "text": "I state punishments to our child and do not actually do them.", "status": "ok"},
+        {"id": "psdq_17", "text": "Item text incomplete in source (show respect for our ...).", "status": "incomplete"},
+        {"id": "psdq_18", "text": "I have warm and intimate times together with our child.", "status": "ok"},
+        {"id": "psdq_19", "text": "I punish by putting our child off somewhere alone with little if any explanation.", "status": "ok"},
+        {"id": "psdq_20", "text": "I help our child to understand the impact of behavior by encouraging our child to talk about the consequences of his/her own actions.", "status": "ok"},
+        {"id": "psdq_21", "text": "I scold or criticize when our child's behavior doesn't meet our expectations.", "status": "ok"},
+        {"id": "psdq_22", "text": "I explain the consequences of the child's behavior.", "status": "ok"},
+        {"id": "psdq_23", "text": "I slap our child when the child misbehaves.", "status": "ok"}
+      ],
+
+      "rawResponses": {
+        "psdq_01": null, "psdq_02": null, "psdq_03": null, "psdq_04": null, "psdq_05": null,
+        "psdq_06": null, "psdq_07": null, "psdq_08": null, "psdq_09": null, "psdq_10": null,
+        "psdq_11": null, "psdq_12": null, "psdq_13": null, "psdq_14": null, "psdq_15": null,
+        "psdq_16": null, "psdq_17": null, "psdq_18": null, "psdq_19": null, "psdq_20": null,
+        "psdq_21": null, "psdq_22": null, "psdq_23": null
+      },
+
+      "subscaleScores": {
+        "authoritative": null,
+        "authoritarian": null,
+        "permissive": null
+      },
+      "scoringNotes": "Compute validated subscale means once item-to-subscale mapping is finalized."
+    },
+
+    "supportNetwork": {
+      "coParentInvolved": null,
+      "sameHome": null,
+      "coParentRelationship": null,
+      "village": [],
+      "weeklyInvolvement": null,
+      "primarySupportPerson": null,
+      "lastUpdated": "2025-11-02T00:00:00.000Z",
+      "examples": [
+        "Grandparents",
+        "Aunts / Uncles",
+        "Close Friends",
+        "Nanny / Babysitter",
+        "Other"
+      ]
+    }
+  },
+
+  "users/demoUser_001/children/liam_001": {
+    "name": "Liam",
+    "ageYears": 4,
+    "createdAt": "2025-11-02T00:00:00.000Z",
+    "updatedAt": "2025-11-02T00:00:00.000Z",
+
+    "temperamentProfile": {
+      "instrument": "CBQ-VSF",
+      "instrumentVersion": "very-short-form",
+      "instructions": "Please read each statement about your child's reactions to a number of situations over the past six months. Decide whether it is a 'true' or 'untrue' description of your child.",
+      "responseScale": {
+        "1": "Extremely Untrue",
+        "2": "Quite Untrue",
+        "3": "Slightly Untrue",
+        "4": "Neither True nor False",
+        "5": "Slightly True",
+        "6": "Quite True",
+        "7": "Extremely True"
+      },
+      "dateCompleted": null,
+
+      "items": [
+        {"id": "cbq_01", "text": "Seems always in a big hurry to get from one place to another.", "status": "ok"},
+        {"id": "cbq_02", "text": "Gets quite frustrated when prevented from doing something they want to do.", "status": "ok"},
+        {"id": "cbq_03", "text": "When drawing or coloring in a book, shows strong concentration.", "status": "ok"},
+        {"id": "cbq_04", "text": "Likes going down high slides or other adventurous activities.", "status": "ok"},
+        {"id": "cbq_05", "text": "Is quite upset by a little cut or bruise.", "status": "ok"},
+        {"id": "cbq_06", "text": "Prepares for trips and outings by planning things they will need.", "status": "ok"},
+        {"id": "cbq_07", "text": "Often rushes into new situations.", "status": "ok"},
+        {"id": "cbq_08", "text": "Tends to become sad if the family's plans don't work out.", "status": "ok"},
+        {"id": "cbq_09", "text": "Likes being sung to.", "status": "ok"},
+        {"id": "cbq_10", "text": "Seems to be at ease with almost any person.", "status": "ok"},
+        {"id": "cbq_11", "text": "Is afraid of burglars or the \"boogie man.\"", "status": "ok"},
+        {"id": "cbq_12", "text": "Notices it when parents are wearing new clothing.", "status": "ok"},
+        {"id": "cbq_13", "text": "Prefers quiet activities to active games.", "status": "ok"},
+        {"id": "cbq_14", "text": "When angry about something, they tend to stay upset for ten minutes or longer.", "status": "ok"},
+        {"id": "cbq_15", "text": "When building or putting something together, becomes very involved in what they are doing, and works for long periods.", "status": "ok"},
+        {"id": "cbq_16", "text": "Likes to go high and fast when pushed on a swing.", "status": "ok"},
+        {"id": "cbq_17", "text": "Seems to feel depressed when unable to accomplish some task.", "status": "ok"},
+        {"id": "cbq_18", "text": "Is good at following instructions.", "status": "ok"},
+        {"id": "cbq_19", "text": "Takes a long time in approaching new situations.", "status": "ok"},
+        {"id": "cbq_20", "text": "Hardly ever complains when ill with a cold.", "status": "ok"},
+        {"id": "cbq_21", "text": "Likes the sound of words, such as nursery rhymes.", "status": "ok"},
+        {"id": "cbq_22", "text": "Is sometimes shy even around people they have known for a long time.", "status": "ok"},
+        {"id": "cbq_23", "text": "Is very difficult to soothe when they have become upset.", "status": "ok"},
+        {"id": "cbq_24", "text": "Is quickly aware of some new item in the living room.", "status": "ok"},
+        {"id": "cbq_25", "text": "Is full of energy, even in the evening.", "status": "ok"},
+        {"id": "cbq_26", "text": "Is not afraid of the dark.", "status": "ok"},
+        {"id": "cbq_27", "text": "Sometimes becomes absorbed in a picture book and looks at it for a long time.", "status": "ok"},
+        {"id": "cbq_28", "text": "Likes rough and rowdy games.", "status": "ok"},
+        {"id": "cbq_29", "text": "Is not very upset at minor cuts or bruises.", "status": "ok"},
+        {"id": "cbq_30", "text": "Approaches places they have been told are dangerous slowly and cautiously.", "status": "ok"},
+        {"id": "cbq_31", "text": "Is slow and unhurried in deciding what to do next.", "status": "ok"},
+        {"id": "cbq_32", "text": "Gets angry when they can't find something they want to play with.", "status": "ok"},
+        {"id": "cbq_33", "text": "Enjoys gentle rhythmic activities such as rocking or swaying.", "status": "ok"},
+        {"id": "cbq_34", "text": "Sometimes turns away shyly from new acquaintances.", "status": "ok"},
+        {"id": "cbq_35", "text": "Becomes upset when loved relatives or friends are getting ready to leave following a visit.", "status": "ok"},
+        {"id": "cbq_36", "text": "Comments when a parent has changed their appearance.", "status": "ok"}
+      ],
+
+      "rawResponses": {
+        "cbq_01": null, "cbq_02": null, "cbq_03": null, "cbq_04": null, "cbq_05": null, "cbq_06": null,
+        "cbq_07": null, "cbq_08": null, "cbq_09": null, "cbq_10": null, "cbq_11": null, "cbq_12": null,
+        "cbq_13": null, "cbq_14": null, "cbq_15": null, "cbq_16": null, "cbq_17": null, "cbq_18": null,
+        "cbq_19": null, "cbq_20": null, "cbq_21": null, "cbq_22": null, "cbq_23": null, "cbq_24": null,
+        "cbq_25": null, "cbq_26": null, "cbq_27": null, "cbq_28": null, "cbq_29": null, "cbq_30": null,
+        "cbq_31": null, "cbq_32": null, "cbq_33": null, "cbq_34": null, "cbq_35": null, "cbq_36": null
+      },
+
+      "dimensionScores": {
+        "surgencyExtraversion": null,
+        "negativeAffectivity": null,
+        "effortfulControl": null
+      },
+      "scoringNotes": "Compute validated dimension means once item-to-dimension mapping is finalized."
+    },
+
+    "aiContextSummary": null
+  },
+
+  "users/demoUser_001/children/sophie_001": {
+    "name": "Sophie",
+    "ageYears": 2,
+    "createdAt": "2025-11-02T00:00:00.000Z",
+    "updatedAt": "2025-11-02T00:00:00.000Z",
+
+    "temperamentProfile": {
+      "instrument": "CBQ-VSF",
+      "instrumentVersion": "very-short-form",
+      "instructions": "Please read each statement about your child's reactions to a number of situations over the past six months. Decide whether it is a 'true' or 'untrue' description of your child.",
+      "responseScale": {
+        "1": "Extremely Untrue",
+        "2": "Quite Untrue",
+        "3": "Slightly Untrue",
+        "4": "Neither True nor False",
+        "5": "Slightly True",
+        "6": "Quite True",
+        "7": "Extremely True"
+      },
+      "dateCompleted": null,
+      "itemsRef": "Use the same cbq_01–cbq_36 list as Liam to avoid duplication.",
+      "rawResponses": {},
+      "dimensionScores": {
+        "surgencyExtraversion": null,
+        "negativeAffectivity": null,
+        "effortfulControl": null
+      }
+    },
+
+    "aiContextSummary": null
+  },
+
+  "users/demoUser_001/sessionSummaries/session_2025-11-02_000000": {
+    "userId": "demoUser_001",
+    "childId": null,
+    "summary": "",
+    "tokens": 0,
+    "source": "elevenlabs-agent",
+    "createdAt": "2025-11-02T00:00:00.000Z"
+  }
+}

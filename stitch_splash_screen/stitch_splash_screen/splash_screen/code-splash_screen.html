@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aura - AI Parenting Coach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Lora:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#8f0032",
+              "background-light": "#F7F1EF",
+              "background-dark": "#230f16",
+              "text-light": "#181A1B",
+              "text-dark": "#F0E4DF",
+              "secondary": "#71124C",
+              "tertiary": "#410017",
+              "cta-text": "#F0E4DF"
+            },
+            fontFamily: {
+              "display": ["Lora", "serif"],
+              "body": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-body">
+<div class="relative flex h-screen min-h-[600px] w-full flex-col group/design-root overflow-hidden p-4">
+<header class="flex-shrink-0 pt-8 pb-4">
+<h1 class="font-display text-4xl font-medium tracking-wide text-center text-text-light dark:text-text-dark">Aura</h1>
+</header>
+<main class="flex flex-1 flex-col items-center justify-center">
+<div class="flex w-full flex-col items-center justify-center">
+<div class="flex overflow-x-hidden w-full">
+<div class="flex w-full items-stretch">
+<div class="flex h-full w-full flex-shrink-0 flex-col items-center justify-center p-4 min-h-[160px]">
+<h2 class="font-display text-4xl text-center font-medium leading-tight text-text-light dark:text-text-dark">The calm of a partner.</h2>
+</div>
+</div>
+</div>
+<div class="flex w-full flex-row items-center justify-center gap-3 py-5">
+<div class="h-2 w-2 rounded-full bg-primary"></div>
+<div class="h-2 w-2 rounded-full bg-primary/30"></div>
+<div class="h-2 w-2 rounded-full bg-primary/30"></div>
+</div>
+</div>
+</main>
+<footer class="flex-shrink-0 pb-8 pt-4">
+<div class="flex px-4 py-3">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-5 flex-1 bg-primary text-cta-text text-lg font-bold leading-normal tracking-wide font-body">
+<span class="truncate">Get Started</span>
+</button>
+</div>
+</footer>
+</div>
+</body></html>

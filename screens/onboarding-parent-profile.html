@@ -1,0 +1,17 @@
+<section class="screen onboarding parent-profile">
+  <!-- Paste Stitch markup for Parent Profile here (code-onboarding_-_parent_profile.html) -->
+  <header class="topbar">
+    <button class="link" data-nav="onboarding/create-account" data-i18n="nav.back">Back</button>
+    <h2 data-i18n="onboarding.parentProfile.title">Your profile</h2>
+  </header>
+  <form class="card form grid">
+    <label><span data-i18n="form.firstName">First name</span><input type="text" placeholder="First name"/></label>
+    <label><span data-i18n="form.lastName">Last name</span><input type="text" placeholder="Last name"/></label>
+    <label><span data-i18n="form.timezone">Timezone</span><select><option>Auto</option></select></label>
+    <label><span data-i18n="form.coachStyle">Preferred coach style</span><select>
+      <option data-i18n="coachStyle.supportive">Supportive</option>
+      <option data-i18n="coachStyle.structured">Structured</option>
+    </select></label>
+    <button class="primary" data-nav="onboarding/child-count" data-i18n="action.next">Next</button>
+  </form>
+</section>

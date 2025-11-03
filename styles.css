@@ -1,0 +1,86 @@
+/* Style guide colors from Coolors
+     Linen:            #F0E4DF
+     Claret (Primary): #8F0032
+     Chocolate cosmos: #410017
+     Tyrian purple:    #71124C
+     Eerie black:      #181A1B
+*/
+:root{
+    --bg:#181A1B;              /* Eerie black */
+    --surface:#410017;          /* Deep surface */
+    --card:#71124C;             /* Card panels */
+    --text:#F0E4DF;             /* Linen */
+    --muted:#e8d8d2;            /* Soft linen */
+    --primary:#8F0032;          /* Claret */
+    --primary-contrast:#F0E4DF; /* On-primary */
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+}
+
+.app-shell{min-height:100dvh;display:flex}
+
+.screen{flex:1;display:flex;flex-direction:column;gap:16px;padding:24px}
+.topbar{display:flex;align-items:center;gap:12px}
+.topbar h2{margin:0;font-size:1.1rem}
+
+/* Global language bar */
+.globalbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:rgba(24,26,27,.7);backdrop-filter:blur(6px);border-bottom:1px solid #31101c}
+.globalbar .brand{font-weight:600;letter-spacing:.2px}
+.lang-toggle{display:flex;gap:8px}
+.lang-toggle .flag{display:flex;align-items:center;gap:6px;background:transparent;border:1px solid #4b1632;border-radius:10px;padding:6px 10px;color:var(--text)}
+.lang-toggle .flag.active{background:var(--primary);color:var(--primary-contrast);border-color:transparent}
+.lang-toggle .emoji{font-size:18px;line-height:1}
+.lang-toggle .lang-code{font-size:12px;letter-spacing:.6px;padding:2px 6px;border-radius:6px;background:rgba(0,0,0,.15);border:1px solid #4b1632}
+
+.card{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 2px 16px rgba(0,0,0,.35)}
+.form label{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;color:var(--muted)}
+.form input,.form select{background:var(--surface);border:1px solid #31101c;border-radius:10px;padding:10px 12px;color:var(--text)}
+
+button{cursor:pointer;border:0;border-radius:12px;padding:10px 14px;background:#31101c;color:var(--text)}
+button.primary{background:var(--primary);color:var(--primary-contrast)}
+button.secondary{background:var(--surface);color:var(--text)}
+button.link{background:transparent;color:var(--primary);padding:6px}
+button.chip{background:var(--surface)}
+
+/* Splash */
+.splash .center{margin:auto;text-align:center;max-width:520px}
+.splash .logo-circle{width:84px;height:84px;margin:0 auto 12px;border-radius:50%;background:linear-gradient(135deg, #8F0032, #71124C)}
+.splash .subtitle{color:var(--muted);margin:8px 0 20px}
+
+/* Pulse checker */
+.steps{list-style:none;display:flex;gap:8px;padding:0;margin:0 0 12px}
+.steps li{font-size:12px;color:var(--muted);padding:6px 10px;border:1px solid #4b1632;border-radius:999px}
+.steps li.active{color:var(--primary-contrast);background:var(--primary);border-color:transparent}
+.group{margin:14px 0}
+.group-title{display:block;margin-bottom:8px;color:var(--text);font-weight:600}
+.options{display:grid;gap:8px}
+.options.col1{grid-template-columns:1fr}
+.options.col2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.opt{display:flex;align-items:flex-start;gap:8px;padding:10px 12px;background:var(--surface);border:1px solid #31101c;border-radius:12px}
+.opt input{margin-top:3px}
+.muted{color:var(--muted)}
+.pager{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* Chat */
+.chat .chat-thread{flex:1;display:flex;flex-direction:column;gap:8px}
+.chat .msg{max-width:70%;padding:10px 12px;border-radius:14px}
+.chat .msg.coach{background:#71124C;align-self:flex-start}
+.chat .msg.user{background:#8F0032;align-self:flex-end}
+.chat .chat-input{display:flex;gap:8px}
+.chat .chat-input input{flex:1;background:var(--surface);border:1px solid #2a2e39;border-radius:12px;padding:12px;color:var(--text)}
+
+/* Drawer */
+.menu{position:relative}
+.drawer{position:fixed;inset:0 auto 0 0;width:320px;background:var(--card);transform:translateX(0);box-shadow:0 10px 40px rgba(0,0,0,.6)}
+.drawer-header{display:flex;gap:12px;align-items:center;padding:16px}
+.drawer-header .avatar{width:40px;height:40px;border-radius:50%;background:#410017}
+.drawer-nav{display:flex;flex-direction:column}
+.drawer-nav a{color:var(--text);text-decoration:none;padding:12px 16px;border-top:1px solid #4b1632}
+.backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5)}

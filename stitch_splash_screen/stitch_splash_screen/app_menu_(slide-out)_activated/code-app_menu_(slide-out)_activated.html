@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aura - AI Parenting Coach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: 'Lora', serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8F0032", // Claret
+                        "background-light": "#f7f1ef", // Lighter Linen
+                        "background-dark": "#181A1B", // Eerie Black (as a dark theme base)
+                        "text-light": "#181A1B", // Eerie Black
+                        "text-dark": "#f7f1ef", // Lighter Linen
+                        "secondary-accent": "#71124C", // Tyrian Purple
+                        "tertiary-accent": "#410017", // Chocolate Cosmos
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Lora", "serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative h-screen w-full overflow-hidden">
+<div class="absolute inset-0 flex h-full w-full flex-col bg-background-light dark:bg-background-dark p-4">
+<header class="flex items-center justify-between border-b border-text-light/10 pb-4">
+<button class="p-2">
+<span class="material-symbols-outlined text-3xl text-text-light dark:text-text-dark">menu</span>
+</button>
+<div class="text-center">
+<h1 class="font-serif text-xl font-semibold">Aura</h1>
+<p class="text-sm text-text-light/60 dark:text-text-dark/60">Your Parenting Coach</p>
+</div>
+<div class="size-9"></div>
+</header>
+<main class="flex-1 space-y-6 overflow-y-auto py-6">
+<div class="flex items-start gap-3">
+<div class="flex size-10 items-center justify-center rounded-full bg-secondary-accent/20">
+<span class="material-symbols-outlined text-secondary-accent">spark</span>
+</div>
+<div class="w-fit max-w-[80%] rounded-b-xl rounded-tr-xl bg-primary/10 p-4">
+<p>Hi Eleanor! How are things going with Noah today?</p>
+</div>
+</div>
+<div class="flex flex-row-reverse items-start gap-3">
+<img class="size-10 rounded-full object-cover" data-alt="User profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0xpJ6wlixPzTrOtL2mEudDRNRSzNqMySU3B_32M0Pwcx-Zx0l4l8HlobAvtZsMsP_x4bxibc4VInfebnokGKXaLhNGpLLcupEAgKmPZmtN4GCU6F-I9V7qL9NtecDvRGyLVEQI7CyShxKmdkf_YUWYuWMJ40CPq9zSO-mYHu5d-PVk-ctjBTrT01IKU8V1na92DZHsiWgexucQDTiAfgusz6CNEoTrCLs-6qhPvNoPt4g1v4yD1C_yNhDyS-mb6Xq9BWdbpasu8Q"/>
+<div class="w-fit max-w-[80%] rounded-b-xl rounded-tl-xl bg-primary p-4 text-white">
+<p>It's been a tough morning. He had another tantrum about not wanting to wear his shoes.</p>
+</div>
+</div>
+</main>
+<footer class="flex items-center gap-2 border-t border-text-light/10 pt-4">
+<button class="p-3"><span class="material-symbols-outlined text-2xl text-text-light/70 dark:text-text-dark/70">add_circle</span></button>
+<input class="flex-1 rounded-full border-text-light/20 bg-text-light/5 px-4 py-3 text-base focus:border-primary focus:ring-primary dark:border-text-dark/20 dark:bg-text-dark/5" placeholder="Type your message..." type="text"/>
+<button class="p-3"><span class="material-symbols-outlined text-2xl text-text-light/70 dark:text-text-dark/70">mic</span></button>
+</footer>
+</div>
+<div class="absolute inset-0 z-50">
+<div class="flex h-full w-10/12 max-w-sm flex-col bg-background-light shadow-2xl dark:bg-background-dark">
+<div class="flex h-full flex-col p-4">
+<header class="flex items-center justify-between pb-6 pl-4 pt-6">
+<div class="flex items-center gap-4">
+<img class="size-12 rounded-full object-cover" data-alt="User profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMGRKQ1RSMSlEddk2M8YiLGYsfyvWvpbaswMVn_Zw1ZjA950RI3h1FnSt96adUpGn9J9cQYIGPTemrS3gcI7hIKi3zmDOtFPAKMCdZLOZ2tQgnKtI4wDU6vpfzLangjol_lX3lKO4siEGz4lzPDMgzpurzC4quqieA4QT3an9ODBYDx4rwLkZA8xolxe59Rh6AxmkroZYpjV3pWjX7qWkpWhO57MAfkT_ZRJJRnnKJ610XY2SsIeKZOGTN_7eNbHqa3e9gjf3y6so"/>
+<p class="font-serif text-2xl font-semibold text-text-light dark:text-text-dark">Eleanor Vance</p>
+</div>
+<button class="p-2">
+<span class="material-symbols-outlined text-3xl text-text-light/70 dark:text-text-dark/70">close</span>
+</button>
+</header>
+<nav class="flex-1">
+<ul class="flex flex-col gap-2">
+<li>
+<div class="flex h-14 items-center justify-between rounded-lg px-4 hover:bg-primary/10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-2xl text-text-light dark:text-text-dark">child_care</span>
+<p class="text-lg font-medium text-text-light dark:text-text-dark">My Children</p>
+</div>
+<span class="material-symbols-outlined text-2xl text-text-light/70 dark:text-text-dark/70">expand_more</span>
+</div>
+<ul class="ml-8 mt-1 flex flex-col gap-1 border-l-2 border-primary/20 pl-6">
+<li class="flex h-12 cursor-pointer items-center rounded-lg px-4 bg-primary/10 text-primary">
+<p class="text-base font-semibold">Noah (5)</p>
+</li>
+<li class="flex h-12 cursor-pointer items-center rounded-lg px-4 hover:bg-primary/10">
+<p class="text-base font-medium text-text-light/80 dark:text-text-dark/80">Olivia (2)</p>
+</li>
+</ul>
+</li>
+<li class="flex h-14 cursor-pointer items-center gap-4 rounded-lg px-4 hover:bg-primary/10">
+<span class="material-symbols-outlined text-2xl text-text-light dark:text-text-dark">history</span>
+<p class="text-lg font-medium text-text-light dark:text-text-dark">Past Conversations</p>
+</li>
+<li class="flex h-14 cursor-pointer items-center gap-4 rounded-lg px-4 hover:bg-primary/10">
+<span class="material-symbols-outlined text-2xl text-text-light dark:text-text-dark">account_circle</span>
+<p class="text-lg font-medium text-text-light dark:text-text-dark">My Account</p>
+</li>
+<li class="flex h-14 cursor-pointer items-center gap-4 rounded-lg px-4 hover:bg-primary/10">
+<span class="material-symbols-outlined text-2xl text-text-light dark:text-text-dark">settings</span>
+<p class="text-lg font-medium text-text-light dark:text-text-dark">Settings</p>
+</li>
+</ul>
+</nav>
+<footer class="border-t border-text-light/10 pt-4">
+<ul class="flex flex-col gap-2">
+<li class="flex h-14 cursor-pointer items-center gap-4 rounded-lg px-4 hover:bg-primary/10">
+<span class="material-symbols-outlined text-2xl text-text-light/80 dark:text-text-dark/80">help_outline</span>
+<p class="text-lg font-medium text-text-light/80 dark:text-text-dark/80">Help &amp; Support</p>
+</li>
+<li class="flex h-14 cursor-pointer items-center gap-4 rounded-lg px-4 hover:bg-primary/10">
+<span class="material-symbols-outlined text-2xl text-text-light/80 dark:text-text-dark/80">logout</span>
+<p class="text-lg font-medium text-text-light/80 dark:text-text-dark/80">Log Out</p>
+</li>
+</ul>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>

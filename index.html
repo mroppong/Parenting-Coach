@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Parenting Coach</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="globalbar">
+        <div class="brand">Parenting Coach</div>
+        <div class="lang-toggle" aria-label="Language toggle">
+            <button id="lang-toggle" class="flag globe-btn" title="Change language" aria-label="Change language">
+                <span class="emoji" role="img" aria-label="Europe-Africa globe">�</span>
+                <span id="lang-code" class="lang-code">EN</span>
+            </button>
+        </div>
+    </header>
+    <div id="app" class="app-shell">
+        <!-- Screen content gets injected here by router.js -->
+    </div>
+
+    <!-- Optional: Firebase SDK (wire up later when needed) -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="app.js"></script> -->
+
+    <script src="i18n.js"></script>
+    <script src="router.js"></script>
+</body>
+</html>

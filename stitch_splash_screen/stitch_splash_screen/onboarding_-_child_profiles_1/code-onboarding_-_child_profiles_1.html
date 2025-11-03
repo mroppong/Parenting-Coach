@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aura - Add Child Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#8f0032",
+              "background-light": "#f7f1ef",
+              "background-dark": "#181a1b",
+              "claret": "#8F0032",
+              "tyrian-purple": "#71124C",
+              "chocolate-cosmos": "#410017",
+              "eerie-black": "#181A1B",
+              "linen": "#F0E4DF",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "serif": ["Lora", "serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-eerie-black dark:text-linen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex flex-grow flex-col pb-28">
+<header class="p-6">
+<div class="flex flex-col gap-2">
+<p class="font-serif text-lg font-medium leading-tight text-tyrian-purple dark:text-linen">Child 1 of 2</p>
+<div class="h-2 w-full rounded-full bg-eerie-black/10 dark:bg-linen/20">
+<div class="h-2 rounded-full bg-tyrian-purple dark:bg-tyrian-purple" style="width: 50%;"></div>
+</div>
+</div>
+</header>
+<main class="flex flex-col gap-8 px-6 py-4">
+<div class="text-center">
+<h1 class="font-serif text-3xl font-medium text-eerie-black dark:text-linen">Tell us about your child</h1>
+<p class="mt-2 text-eerie-black/70 dark:text-linen/70">This helps us personalize your guidance.</p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-4 md:flex-row">
+<label class="flex w-full flex-col">
+<p class="pb-2 text-sm font-medium leading-normal text-eerie-black dark:text-linen/90">Child's First Name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-eerie-black/20 bg-transparent text-eerie-black focus:border-tyrian-purple focus:outline-0 focus:ring-0 focus:ring-tyrian-purple dark:border-linen/20 dark:text-linen dark:placeholder:text-linen/50 dark:focus:border-tyrian-purple" placeholder="Enter their first name" value=""/>
+</label>
+<label class="flex w-full flex-col">
+<p class="pb-2 text-sm font-medium leading-normal text-eerie-black dark:text-linen/90">Child's Date of Birth</p>
+<div class="relative flex w-full flex-1 items-stretch">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-eerie-black/20 bg-transparent pr-10 text-eerie-black focus:border-tyrian-purple focus:outline-0 focus:ring-0 focus:ring-tyrian-purple dark:border-linen/20 dark:text-linen dark:placeholder:text-linen/50 dark:focus:border-tyrian-purple" placeholder="Select a date" type="date" value=""/>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-eerie-black/60 dark:text-linen/60">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+</div>
+</div>
+</label>
+</div>
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium leading-normal text-eerie-black dark:text-linen/90">Describe your child's personality</p>
+<textarea class="form-input flex min-h-28 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-eerie-black/20 bg-transparent text-eerie-black focus:border-tyrian-purple focus:outline-0 focus:ring-0 focus:ring-tyrian-purple dark:border-linen/20 dark:text-linen dark:placeholder:text-linen/50 dark:focus:border-tyrian-purple" placeholder="e.g., curious, energetic, thoughtful..."></textarea>
+</label>
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium leading-normal text-eerie-black dark:text-linen/90">What are some of their favorite activities or interests?</p>
+<textarea class="form-input flex min-h-28 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-eerie-black/20 bg-transparent text-eerie-black focus:border-tyrian-purple focus:outline-0 focus:ring-0 focus:ring-tyrian-purple dark:border-linen/20 dark:text-linen dark:placeholder:text-linen/50 dark:focus:border-tyrian-purple" placeholder="e.g., building with blocks, drawing, story time..."></textarea>
+</label>
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium leading-normal text-eerie-black dark:text-linen/90">What are your most common conflicts?</p>
+<textarea class="form-input flex min-h-28 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-eerie-black/20 bg-transparent text-eerie-black focus:border-tyrian-purple focus:outline-0 focus:ring-0 focus:ring-tyrian-purple dark:border-linen/20 dark:text-linen dark:placeholder:text-linen/50 dark:focus:border-tyrian-purple" placeholder="e.g., screen time, bedtime routines, sharing toys..."></textarea>
+</label>
+<div class="flex flex-col gap-3">
+<p class="text-sm font-medium leading-normal text-eerie-black dark:text-linen/90">How intense are their reactions typically?</p>
+<input class="form-range h-2 w-full cursor-pointer appearance-none rounded-full bg-eerie-black/10 accent-tyrian-purple dark:bg-linen/20" max="5" min="1" type="range" value="3"/>
+<div class="flex justify-between text-xs text-eerie-black/60 dark:text-linen/60">
+<span>Low</span>
+<span>Medium</span>
+<span>High</span>
+</div>
+</div>
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium leading-normal text-eerie-black dark:text-linen/90">How do they usually react when upset?</p>
+<textarea class="form-input flex min-h-28 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-eerie-black/20 bg-transparent text-eerie-black focus:border-tyrian-purple focus:outline-0 focus:ring-0 focus:ring-tyrian-purple dark:border-linen/20 dark:text-linen dark:placeholder:text-linen/50 dark:focus:border-tyrian-purple" placeholder="e.g., crying, yelling, withdrawing, seeking comfort..."></textarea>
+</label>
+</div>
+</main>
+</div>
+<footer class="fixed bottom-0 left-0 w-full bg-background-light p-4 dark:bg-background-dark">
+<div class="mx-auto max-w-xl">
+<button class="flex w-full items-center justify-center rounded-lg bg-claret px-6 py-4 text-base font-bold text-white transition-colors hover:bg-claret/90 focus:outline-none focus:ring-2 focus:ring-claret focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark">Next Child</button>
+</div>
+</footer>
+</div>
+</body></html>
